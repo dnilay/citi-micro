@@ -7,17 +7,18 @@ public class Main {
     {
       int a[];
       a=new int[10];
+      char c[]=new char[26];
 
-      for(int i=0;i<10;i++)
+      for(int i=0;i<26;i++)
       {
-          a[i]=i+1;
+          c[i]=(char)('A'+i);
       }
 
-      for(int i=0;i<10;i++)
+      for(int i=0;i<26;i++)
       {
-          System.out.println(a[i]);
+          System.out.println(c[i]);
       }
-
+//System.out.println(a);
 
 
 
