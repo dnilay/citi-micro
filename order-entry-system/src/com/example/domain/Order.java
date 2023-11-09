@@ -1,7 +1,9 @@
 package com.example.domain;
 
+import javax.swing.plaf.IconUIResource;
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Order {
     //attributes
@@ -11,9 +13,14 @@ public class Order {
     private String orderName;
     private boolean isDelivered;
 
+    //class variable
+    private static int count=0;
+    private Scanner scanner=new Scanner(System.in);
+
     public Order()
     {
-
+        count++;
+        System.out.println(count);
     }
 
     public Order(int orderId) {
@@ -41,6 +48,16 @@ public class Order {
     public String displayDetails()
     {
         return "Order ID: "+orderId+" Order Date: "+orderDate+" Order Name: "+orderName+" Deliveed:? "+isDelivered;
+    }
+
+    public void createOrder()
+    {
+        System.out.print("Enter Order Name: ");
+        orderName=scanner.next();
+        System.out.print("Enter Order ID: ");
+        orderId=scanner.nextInt();
+        orderDate=new Date();
+        isDelivered=false;
     }
 
 }
