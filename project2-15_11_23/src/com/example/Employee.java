@@ -49,4 +49,9 @@ public class Employee {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+
+    public String getDetails()
+    {
+        return "EmployeeID: "+employeeId+" Employee Name: "+name+" Salary: "+salary+" date: "+birthDate;
+    }
 }

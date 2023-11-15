@@ -15,9 +15,13 @@ public class Manager extends Employee{
         this.departmentName = departmentName;
     }
 
-    public String getDetails()
-    {
-        return super.getEmployeeId()+" "+super.getName()+" "+super.getSalary()+" "+super.getBirthDate()+" "+departmentName;
+    @Override
+    public String getDetails() {
+        return super.getDetails()+" Department Name: "+departmentName;
     }
 
+    public void A()
+    {
+
+    }
 }
