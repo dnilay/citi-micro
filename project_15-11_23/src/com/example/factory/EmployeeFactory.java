@@ -40,7 +40,22 @@ public class EmployeeFactory {
         lName=scanner.next();
         System.out.print("Enter Email: ");
         email=scanner.next();
-        return new Employee(new Random().nextInt(),fName,lName,email);
+        return new Employee(new Random().nextInt(10000),fName,lName,email);
 
+    }
+
+    public static Employee findEmployeeById(int employeeId)
+    {
+        Employee e=null;
+
+        for(Employee employee:employees)
+        {
+            if(employee.getEmployeeId()==employeeId)
+            {
+                e=employee;
+                break;
+            }
+        }
+        return e;
     }
 }
