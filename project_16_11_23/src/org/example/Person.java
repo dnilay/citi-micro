@@ -5,6 +5,9 @@ public class Person {
     private int age;
     private String name;
 
+    public Person() {
+    }
+
     public Person(int age, String name) {
         this.age = age;
         this.name = name;
@@ -28,16 +31,5 @@ public class Person {
         }
     }
 
-    public static void main(String[] args)
-    {
-        Person p1=new Person(20,"Shane");
-        Person p2=new Person(19,"Shane");
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(p1.equals(p2));
-        String str=new String("Hello World");
-        String str1=new String("Hello World1");
-        System.out.println(str.equals(str1));
 
-    }
 }
