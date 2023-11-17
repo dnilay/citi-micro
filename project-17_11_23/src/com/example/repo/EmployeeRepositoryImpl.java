@@ -21,4 +21,21 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     public List<Employee> getAllEmployees() {
         return employees;
     }
+
+    @Override
+    public Employee getEmployeeById(int employeeId) {
+        Employee employee=null;
+        for(Employee e:employees)
+        {
+            if(e.getEmployeeId()==employeeId)
+            {
+
+                employee=e;
+                break;
+
+            }
+        }
+
+        return employee;
+    }
 }

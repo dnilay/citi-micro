@@ -9,4 +9,6 @@ public interface EmployeeRepository {
     public void createEmployee(Employee employee);
 
     public List<Employee> getAllEmployees();
+
+    public Employee getEmployeeById(int employeeId);
 }

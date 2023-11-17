@@ -16,6 +16,7 @@ public class Main {
         do {
             System.out.println("1. Create an Employee.");
             System.out.println("2. Dsisplay All Employees.");
+            System.out.println("3. Get Employee By Id.");
             System.out.println("0. Exit.");
             System.out.print("Enter your choice: ");
             choice=scanner.nextInt();
@@ -43,6 +44,18 @@ public class Main {
                            }
                        }
                        break;
+                case 3:
+                    System.out.print("Enter ID: ");
+                    int id=scanner.nextInt();
+                    Employee employee=employeeRepository.getEmployeeById(id);
+                    if(employee==null)
+                    {
+                        System.out.println("no employee found with id: "+id);
+                    }
+                    else {
+                        System.out.println("found\n"+employee);
+                    }
+                    break;
                 case 0:
                     System.out.println("Bye.");
                     System.exit(0);
