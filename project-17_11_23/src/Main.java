@@ -1,40 +1,57 @@
 import com.example.Customer;
 import com.example.Employee;
+import com.example.repo.EmployeeRepository;
+import com.example.repo.EmployeeRepositoryImpl;
 
 import java.util.*;
 
 public class Main {
+
+    private static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
-        /*Set<Employee> set=new HashSet<Employee>();
+        EmployeeRepository employeeRepository=new EmployeeRepositoryImpl();
+        int choice=0;
+        String name=null;
+        double salary=0;
+        do {
+            System.out.println("1. Create an Employee.");
+            System.out.println("2. Dsisplay All Employees.");
+            System.out.println("0. Exit.");
+            System.out.print("Enter your choice: ");
+            choice=scanner.nextInt();
+            switch (choice)
+            {
+                case 1:
+                    System.out.print("Enter Employee Name: ");
+                    name=scanner.next();
+                    System.out.print("Enter Employee Salary: ");
+                    salary=scanner.nextDouble();
+                    employeeRepository.createEmployee(new Employee(new Random().nextInt(1000),name,salary));
+                    break;
+                case 2:
+                       List<Employee> list=employeeRepository.getAllEmployees();
 
-        set.add(new Employee(100,"John Doe",12000));
-        set.add(new Employee(101,"Mary Public",12000));
+                       if(list.isEmpty())
+                       {
+                           System.out.println(" no employee(s) available try after some time.");
+                       }
+                       else
+                       {
+                           for(Employee e:list)
+                           {
+                               System.out.println(e);
+                           }
+                       }
+                       break;
+                case 0:
+                    System.out.println("Bye.");
+                    System.exit(0);
+                default:
+                    System.out.println("invalid choice");
+                    break;
+            }
+        }while (choice !=0);
 
-        //using iterator
-        Iterator<Employee> i=set.iterator();
-        while (i.hasNext())
-        {
-            Employee e=i.next();
-            System.out.println(e);
-        }
-*/
-        Set<Integer> set=new HashSet<Integer>();
-        set.add(100);
-        set.add(200);
-        set.add(300);
-        set.add(100);
-        System.out.println(set);
-        List<Integer> list=new LinkedList<Integer>();
-        list.add(100);
-        list.add(2);
-        list.add(300);
-        list.add(100);
-        System.out.println(list);
-        Iterator<Integer> iterator=list.iterator();
-        while (iterator.hasNext())
-        {
-            System.out.println(iterator.next());
-        }
 
     }
 }
