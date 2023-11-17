@@ -17,6 +17,7 @@ public class Main {
             System.out.println("1. Create an Employee.");
             System.out.println("2. Dsisplay All Employees.");
             System.out.println("3. Get Employee By Id.");
+            System.out.println("4. Delete Employee By Id.");
             System.out.println("0. Exit.");
             System.out.print("Enter your choice: ");
             choice=scanner.nextInt();
@@ -55,6 +56,11 @@ public class Main {
                     else {
                         System.out.println("found\n"+employee);
                     }
+                    break;
+                case 4:
+                    System.out.print("Enter ID: ");
+                    id=scanner.nextInt();
+                    employeeRepository.deleteById(id);
                     break;
                 case 0:
                     System.out.println("Bye.");

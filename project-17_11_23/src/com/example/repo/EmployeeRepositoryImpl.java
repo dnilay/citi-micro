@@ -31,11 +31,26 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
             {
 
                 employee=e;
+
                 break;
 
             }
         }
 
         return employee;
+    }
+
+    @Override
+    public void deleteById(int employeeId) {
+        Employee e=getEmployeeById(employeeId);
+        if(e==null)
+        {
+            System.out.println("nu such employee found with id: "+employeeId);
+        }
+        else
+        {
+            employees.remove(e);
+            System.out.println("removed...");
+        }
     }
 }

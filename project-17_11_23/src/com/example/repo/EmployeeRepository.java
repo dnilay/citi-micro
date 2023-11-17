@@ -11,4 +11,6 @@ public interface EmployeeRepository {
     public List<Employee> getAllEmployees();
 
     public Employee getEmployeeById(int employeeId);
+
+    public void deleteById(int employeeId);
 }
