@@ -35,6 +35,7 @@ public class Main {
 
             System.out.println("1. Create Employee");
             System.out.println("2. Display All Employees");
+            System.out.println("3. Find Employee By Id");
             System.out.println("0. Exit");
             System.out.print("Enter Your Choice: ");
             choice=scanner.nextInt();
@@ -46,6 +47,10 @@ public class Main {
                     break;
                 case 2:
                     employeeFactory.listEmployees();
+                    break;
+                case 3:
+                    System.out.print("Enter Employee ID: ");
+                    employeeFactory.getEmployeeById(scanner.nextInt());
                     break;
                 case 0:
                     System.out.println("bye.....");

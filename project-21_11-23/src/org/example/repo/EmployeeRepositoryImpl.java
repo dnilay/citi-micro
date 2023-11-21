@@ -24,4 +24,17 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     public Collection<Employee> listAllEmployees() {
         return employeeMap.values();
     }
+
+    @Override
+    public Employee findEmployeeById(int employeeId) {
+        Collection<Employee> employees=employeeMap.values();
+        Employee employee=null;
+        for(Employee e:employees)
+        {
+            if(employeeId==e.getEmployeeId())
+                employee=e;
+            break;
+        }
+        return employee;
+    }
 }

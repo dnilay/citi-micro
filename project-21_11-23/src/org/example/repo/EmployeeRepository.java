@@ -8,4 +8,6 @@ public interface EmployeeRepository {
 
     public Employee createEmployee(Employee employee);
     public Collection<Employee> listAllEmployees();
+
+    public Employee findEmployeeById(int employeeId);
 }

@@ -44,4 +44,16 @@ public class EmployeeFactory {
         }
     }
 
+    public void getEmployeeById(int employeeId)
+    {
+        Employee employee=employeeRepository.findEmployeeById(employeeId);
+        if(employee!=null)
+        {
+            System.out.println("employee found with id: "+employeeId);
+        }
+        else {
+            System.out.println("employee not found.");
+        }
+    }
+
 }
