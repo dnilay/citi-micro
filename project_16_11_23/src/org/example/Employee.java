@@ -48,11 +48,11 @@ public class Employee implements Comparable{
             return 0;
         }
         else if(salary>employee.getSalary()){
-          return 1;
+          return -1;
         }
 
         else {
-            return -1;
+            return 1;
         }
     }
 
