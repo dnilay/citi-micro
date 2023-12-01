@@ -6,3 +6,7 @@ User Name: clouduser
 Password: TAjg9aDsqHvVcIG7
 
 
+under target folder
+use command java -jar <name of your jar file>
+
+
